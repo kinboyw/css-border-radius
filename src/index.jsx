@@ -10,14 +10,18 @@ class App extends React.Component{
     this.handleChange = this.handleChange.bind(this)
     this.onLoad = this.onLoad.bind(this)
   }
+
   handleChange(val){
     let el = document.getElementById("face-after")
     el.style.cssText += val.target.value
   }
 
   onLoad(){
-    let attrs = ['border-radius','height','width']
+    let attrs = ['border-radius','height','width','animation']
     let el = attrs.reduce((a,v)=>{
+      if(v==="animation" && this.getComputedStyleValue('#face-after',v).indexOf('none running')>0){
+        return a += "";
+      }
       return a += `${v}: ${this.getComputedStyleValue('#face-after',v)};\r\n`
     },"")
     let input = document.getElementById('stylebox')
@@ -36,9 +40,9 @@ class App extends React.Component{
     return (
       <div className="border-box-wrapper">
       <div className="stylebox">
-        <textarea id="stylebox"  onChange={this.handleChange} type="text" />
+        <textarea id="stylebox"  onChange={e=>{setTimeout(this.handleChange(e),500)}} type="text" />
       </div>
-      <div className="face">
+      <div id="face-after" className="face">
         <div className="eye left">
           <div className="black">
             <div className="bling"></div>
@@ -55,7 +59,7 @@ class App extends React.Component{
         <div className="mouse">
           <div className="tooth"></div>
         </div>
-        <div id="face-after" className="face-after"></div>
+        <div className="face-after"></div>
       </div>
       </div>
     );

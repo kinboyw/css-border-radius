@@ -1,0 +1,188 @@
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+#face-after {
+  border-radius: 0px;
+}
+@keyframes silly {
+  to {
+    border-radius: 50%;
+  }
+}
+.face {
+  width: 240px;
+  height: 240px;
+  background-color: #EEBC12;
+  position: relative;
+  /*眉毛*/
+}
+.face .eye {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  /*脸颊*/
+}
+.face .eye .black {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+.face .eye .black .bling {
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+.face .eye .black .bling::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  right: -2px;
+}
+.face .eye .chick {
+  width: 40px;
+  height: 30px;
+  background-color: #E67E22;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+}
+.face .eye .chick.left {
+  right: 0px;
+}
+.face .eye .chick.right {
+  left: 0px;
+}
+.face .eye::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 -8px 0 0 #D35400;
+  top: -10px;
+}
+.face .eye.left {
+  left: 15%;
+}
+.face .eye.right {
+  right: 15%;
+}
+.face .nose {
+  width: 20px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 0 #E67E22;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.face .mouse {
+  width: 60px;
+  height: 30px;
+  background-color: black;
+  border-radius: 0 0 60px 60px;
+  position: relative;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.face .mouse .tooth {
+  width: 15px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-102%);
+  z-index: -1;
+}
+.face .mouse .tooth::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  left: 104%;
+}
+.face .mouse::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-color: #EBBC12;
+  border-radius: 0 0 100px 100px;
+  position: absolute;
+  left: 50%;
+  top: -16px;
+  transform: translate(-50%, -50%);
+}
+.border-box-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: center;
+}
+.stylebox {
+  margin: 50px auto !important;
+  position: relative;
+}
+.stylebox #stylebox {
+  margin: 0;
+  width: 28em;
+  height: 8em;
+  border: 5px solid #EBBC12;
+  outline: none;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 20px;
+}
+.stylebox::after {
+  content: "";
+  display: inline-block;
+  border: 30px solid transparent;
+  border-top: 30px solid #EBBC12;
+  position: absolute;
+  top: 93%;
+  left: 50%;
+}
+
+
+/*# sourceMappingURL=/src.6ebfba02.css.map */

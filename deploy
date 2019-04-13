@@ -3,5 +3,5 @@
 mv ./dist/src.*.js border-radius.js
 mv ./dist/src.*.css border-radius.css
 
-mv border-radius.js ../reveal.js/lib/js/
-mv border-radius.css ../reveal.js/lib/css/
+cp border-radius.js ../reveal.js/lib/js/
+cp border-radius.css ../reveal.js/lib/css/

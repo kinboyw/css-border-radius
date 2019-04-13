@@ -1,12 +1,17 @@
 textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus, button:focus, button:active, button:hover, label:focus, .btn:active, .btn.active { outline:0px !important; -webkit-appearance:none; }
-.face-after{ width:240px; height:200px; border-radius: 10px; }
+#face-after{
+  border-radius: 0px;
+}
+  @keyframes silly{to{
+  border-radius:50%;
+}}
 
 .face{
   width:240px;
-  height:200px;
-  background-color: transparent;
+  height:240px;
+  background-color: #EEBC12;
   position:relative;
-  
+
     .eye{
     width:50px;
     height:50px;
@@ -76,10 +81,10 @@ textarea:hover, input:hover, textarea:active, input:active, textarea:focus, inpu
     top:-10px;
   }
   .eye.left{
-    left:40px;
+    left:15%;
   }
   .eye.right{
-    right:40px;
+    right:15%;
   }
   .nose{
     width:20px;
@@ -136,13 +141,6 @@ textarea:hover, input:hover, textarea:active, input:active, textarea:focus, inpu
     transform:translate(-50%,-50%);
   }
 }
-.face-after{
-  background-color: #EBBC12;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:-1;
-}
 
 .border-box-wrapper{
   position:absolute;
@@ -158,9 +156,11 @@ textarea:hover, input:hover, textarea:active, input:active, textarea:focus, inpu
   margin:50px auto !important; 
   position:relative;
   #stylebox{
+    margin:0;
     width:28em;
     height:8em;
     border:5px solid #EBBC12;
+    outline:none;
     border-radius: 20px;
     padding:15px;
     font-size:20px;
